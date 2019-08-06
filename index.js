@@ -1,15 +1,14 @@
 const express = require('express')
 
-const Posts = require('./data/db')
+const postsRouter = require('./data/posts/posts-router')
 
-const Comments = require('./data/db')
+
 
 const server = express()
 
+server.use(express.json())
 
-
-
-
+server.use('/api/posts', postsRouter)
 
 
 
